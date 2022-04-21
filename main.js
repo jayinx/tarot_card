@@ -1,7 +1,12 @@
+function tarotcard() {
+
 let randomNumber = Math.floor(Math.random()*21);
 let tarot = randomNumber;
 let card;
-switch(tarot){
+  
+if(document.getElementById("question").value.length > 0)
+{
+  switch(tarot){
     case 0:
     card ='The Fool';
     break;
@@ -94,4 +99,9 @@ switch(tarot){
     console.log('value not found');
     break;
 }
-document.getElementById('output').innerHTML = card;
+  }else{
+    card = 'Please enter sth for the magic to work.'
+  }
+  document.getElementById('output').innerHTML = card;
+        }
+
